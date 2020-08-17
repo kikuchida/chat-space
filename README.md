@@ -15,8 +15,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
 |message|text|null: false|
+|image|string||
+|user_id|string|null:false, foreign_key: true|
+|group_id|string|null:false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -27,8 +29,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|groupname||null: false, foreign_key: true|
-|membertuika|sring|
+|name|string|null: false|
 
 ### Association
 - has_many :messages
@@ -39,8 +40,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|groupus_id|integer|null: false|
-|users_id|integer|null: false|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
