@@ -4,11 +4,11 @@
 |------|----|-------|
 |email|string|null: false, add_index :users, :email, unique: true|
 |password|string|null: false|
-|name|string|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
 - has_many :messages
-- has_many :gropus, through: :groups_users
+- has_many :groups, through: :groups_users
 - has_many :groups_users
 
 ## messagesテーブル
