@@ -39,7 +39,6 @@ $(function(){
       return html;
     };
   }
-  console.log("ok")
   $('.Form').on('submit', function(e){
     e.preventDefault();
     let formData = new FormData(this);
@@ -55,13 +54,16 @@ $(function(){
     .done(function(data){
       let html = buildHTML(data);
       $('.MessageField').append(html);      
-      $('form')[0].reset();
       $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight});
-      $('.Form__submit').prop('disabled', false);
     })
 
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+    })
+
+    .always(function(){
+      $('form')[0].reset();
+      $('.Form__submit').prop('disabled', false);
     });
 
   });
