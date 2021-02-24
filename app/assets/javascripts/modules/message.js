@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="MessageBox">
+      `<div class="MessageBox" data-message-id=${message.id}>
         <div class="MessageInfo">
           <div class="MessageInfo__userName">
             ${message.user_name}
@@ -65,6 +65,5 @@ $(function(){
       $('form')[0].reset();
       $('.Form__submit').prop('disabled', false);
     });
-
   });
 });
