@@ -12,15 +12,15 @@
       Edit
   .MessageField
     = render @messages
-    .MessageBox
-      .MessageInfo
-        .MessageInfo__userName
-          ユーザー名
-        .MessageInfo__date
-          2020/2/2 12:22
-      .Message
-        %p.Message__content
-          こんにちは
+    -# .MessageBox
+    -#   .MessageInfo
+    -#     .MessageInfo__userName
+    -#       ユーザー名
+    -#     .MessageInfo__date
+    -#       2020/2/2 12:22
+    -#   .Message
+    -#     %p.Message__content
+    -#       こんにちは
   .Footer
     = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__contents
